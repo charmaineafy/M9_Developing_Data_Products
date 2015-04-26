@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Titanic Survival Analysis App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Titanic Survival Analysis App">
+  <meta name="author" content="CA">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Titanic Survival Analysis App</h1>
+    <h2>Shiny Application for Developing Data Products</h2>
+    <p>CA<br/>Coursera-Johns Hopkins-Data Science Specialization</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>1. Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>RMS Titanic (<a href="http://en.wikipedia.org/wiki/RMS_Titanic">http://en.wikipedia.org/wiki/RMS_Titanic</a>) was a British passenger liner that sank in the North Atlantic Ocean in the early morning of 15 April 1912 after colliding with an iceberg during her maiden voyage from Southampton, UK to New York City, US. The sinking resulted in the loss of more than 1,500 passengers and crew making it one of the deadliest commercial peacetime maritime disasters in modern history.  The disaster was greeted with worldwide shock and outrage at the huge loss of life and the regulatory and operational failures that had led to it. Public inquiries in Britain and the United States led to major improvements in maritime safety.</p>
+
+<p>This tragedy is famous for saving &quot;women and children first&quot;.  Hence, this Shiny application is developed for users to have a better 
+understanding of the survival of passengers and crews breakdown by Age, Class and Sex. For the purpose of this project, this Shiny 
+application uses the &quot;Titanic&quot; R dataset. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>2. How to use &quot;Titanic Survival Analysis&quot; App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is a simple web application for you to analyze the fate of passengers on the fatal maiden voyage of the ocean liner Titanic, by summarizing survival according to Age, Class (economic status), and Sex.</p>
+
+<ol>
+<li><p>Please run the app at <a href="http://charmaineafy.shinyapps.io/PROJECT">http://charmaineafy.shinyapps.io/PROJECT</a>.</p></li>
+<li><p>Source code of app at <a href="https://github.com/charmaineafy/M9_Developing_Data_Products">https://github.com/charmaineafy/M9_Developing_Data_Products</a>.</p></li>
+<li><p>On the left panel, you can check or uncheck one or more of the checkbox(es) to control the display of the mosiac plot.</p></li>
+<li><p>On the right panel, the mosiac plot will be refreshed automatically upon any changes to the checkboxes. The plot allows user to compare the survivors by the chosen dimensions (Age, Class, Sex).</p></li>
+<li><p>After analyzing the plots, the user may input findings and then print them together with the plot.</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>3. Use Case: Survival Analysis by Single Dimension</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>If user selects only one check-box (either Age, Class, Sex), a mosaic plot and a cross-table (of 2 dimensions) will be displayed. Below is an example when user selected &quot;Age&quot;.</p>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+<pre><code>##        Survived
+## Age      Yes   No  Sum
+##   Child   57   52  109
+##   Adult  654 1438 2092
+##   Sum    711 1490 2201
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>4. Use Case: Survival Analysis by Multiple Dimensions</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>If user selects two or more check-box (from Age, Class, Sex), a mosaic plot will be displayed. Below is an example when user selected &quot;Age&quot; and &quot;Class&quot;. Note: Currently, Shiny App does not support cross-table more than 2 dimensions.</p>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='1. Background'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='2. How to use &quot;Titanic Survival Analysis&quot; App'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='3. Use Case: Survival Analysis by Single Dimension'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='4. Use Case: Survival Analysis by Multiple Dimensions'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
